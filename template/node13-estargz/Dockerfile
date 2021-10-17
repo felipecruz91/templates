@@ -7,7 +7,7 @@ ARG BUILDPLATFORM
 COPY --from=watchdog /fwatchdog /usr/bin/fwatchdog
 RUN chmod +x /usr/bin/fwatchdog
 
-RUN addgroup -S app && adduser app -S -G app
+RUN addgroup --system app && adduser app --system 
 
 WORKDIR /root/
 
