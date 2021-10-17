@@ -1,12 +1,5 @@
-'use strict'
+"use strict"
 
-module.exports = async (event, context) => {
-  const result = {
-    'body': JSON.stringify(event.body),
-    'content-type': event.headers["content-type"]
-  }
-
-  return context
-    .status(200)
-    .succeed(result)
+module.exports = async (context, callback) => {
+    return {status: "done"}
 }
